@@ -1,0 +1,1 @@
+{"version":3,"sources":["metabase/legacy_mbql/schema/macros.cljs"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAIA","names":[],"sourcesContent":["(ns metabase.legacy-mbql.schema.macros\n  (:require-macros\n   [metabase.legacy-mbql.schema.macros]))\n\n(comment metabase.legacy-mbql.schema.macros/keep-me)\n"]}

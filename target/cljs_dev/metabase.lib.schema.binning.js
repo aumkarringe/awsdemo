@@ -1,0 +1,49 @@
+var $CLJS = require("./cljs_env");
+var $jscomp = $CLJS.$jscomp;
+var COMPILED = false;
+require("./cljs.core.js");
+require("./metabase.lib.schema.common.js");
+require("./metabase.util.malli.registry.js");
+var cognitect=$CLJS.cognitect || ($CLJS.cognitect = {});
+var weavejester=$CLJS.weavejester || ($CLJS.weavejester = {});
+var borkdude=$CLJS.borkdude || ($CLJS.borkdude = {});
+var module$shadow_js_shim_module$ttag=$CLJS.module$shadow_js_shim_module$ttag || ($CLJS.module$shadow_js_shim_module$ttag = {});
+var clojure=$CLJS.clojure || ($CLJS.clojure = {});
+var module$shadow_js_shim_module$moment_timezone=$CLJS.module$shadow_js_shim_module$moment_timezone || ($CLJS.module$shadow_js_shim_module$moment_timezone = {});
+var module$shadow_js_shim_module$moment=$CLJS.module$shadow_js_shim_module$moment || ($CLJS.module$shadow_js_shim_module$moment = {});
+var tailrecursion=$CLJS.tailrecursion || ($CLJS.tailrecursion = {});
+var module$shadow_js_shim_module$crc_32=$CLJS.module$shadow_js_shim_module$crc_32 || ($CLJS.module$shadow_js_shim_module$crc_32 = {});
+var devtools=$CLJS.devtools || ($CLJS.devtools = {});
+var cljs=$CLJS.cljs || ($CLJS.cljs = {});
+var inflections=$CLJS.inflections || ($CLJS.inflections = {});
+var net=$CLJS.net || ($CLJS.net = {});
+var shadow=$CLJS.shadow || ($CLJS.shadow = {});
+var goog=$CLJS.goog || ($CLJS.goog = {});
+var camel_snake_kebab=$CLJS.camel_snake_kebab || ($CLJS.camel_snake_kebab = {});
+var flatland=$CLJS.flatland || ($CLJS.flatland = {});
+var lambdaisland=$CLJS.lambdaisland || ($CLJS.lambdaisland = {});
+var medley=$CLJS.medley || ($CLJS.medley = {});
+var no=$CLJS.no || ($CLJS.no = {});
+var metabase=$CLJS.metabase || ($CLJS.metabase = {});
+var malli=$CLJS.malli || ($CLJS.malli = {});
+var com=$CLJS.com || ($CLJS.com = {});
+
+$CLJS.SHADOW_ENV.setLoaded("metabase.lib.schema.binning.js");
+
+goog.provide('metabase.lib.schema.binning');
+metabase.util.malli.registry.register_BANG_(new cljs.core.Keyword("metabase.lib.schema.binning","strategy","metabase.lib.schema.binning/strategy",-1773403737),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"enum","enum",1679018432),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("decode","normalize","decode/normalize",1047511567),metabase.lib.schema.common.normalize_keyword], null),new cljs.core.Keyword(null,"bin-width","bin-width",1377922579),new cljs.core.Keyword(null,"default","default",-1987822328),new cljs.core.Keyword(null,"num-bins","num-bins",847672055)], null));
+metabase.util.malli.registry.register_BANG_(new cljs.core.Keyword("metabase.lib.schema.binning","num-bins","metabase.lib.schema.binning/num-bins",1151926022),metabase.util.malli.registry._with_doc(cljs.core.pos_int_QMARK_,"Number of bins to use."));
+metabase.util.malli.registry.register_BANG_(new cljs.core.Keyword("metabase.lib.schema.binning","bin-width","metabase.lib.schema.binning/bin-width",538632740),metabase.util.malli.registry._with_doc(new cljs.core.Keyword("metabase.lib.schema.common","positive-number","metabase.lib.schema.common/positive-number",2061626826),"Bin width (size of each bin)."));
+metabase.util.malli.registry.register_BANG_(new cljs.core.Keyword("metabase.lib.schema.binning","binning","metabase.lib.schema.binning/binning",-806522293),metabase.util.malli.registry._with_doc(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"and","and",-971899817),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("doc","title","doc/title",636406695),"`:binning` options"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"map","map",1371690461),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("decode","normalize","decode/normalize",1047511567),metabase.lib.schema.common.normalize_map], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"strategy","strategy",-1471631918),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ref","ref",1289896967),new cljs.core.Keyword("metabase.lib.schema.binning","strategy","metabase.lib.schema.binning/strategy",-1773403737)], null)], null)], null),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"multi","multi",-190293005),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),(function (x){
+return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(cljs.core.some((function (p1__75085_SHARP_){
+return cljs.core.get.cljs$core$IFn$_invoke$arity$2(x,p1__75085_SHARP_);
+}),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"strategy","strategy",-1471631918),"strategy"], null)));
+}),new cljs.core.Keyword("error","fn","error/fn",-1263293860),(function (p__75089,_){
+var map__75090 = p__75089;
+var map__75090__$1 = cljs.core.__destructure_map(map__75090);
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__75090__$1,new cljs.core.Keyword(null,"value","value",305978217));
+return ["Invalid binning strategy",cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([value], 0))].join('');
+})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"default","default",-1987822328),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"map","map",1371690461),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"strategy","strategy",-1471631918),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"=","=",1152933628),new cljs.core.Keyword(null,"default","default",-1987822328)], null)], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"bin-width","bin-width",1377922579),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"map","map",1371690461),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"strategy","strategy",-1471631918),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"=","=",1152933628),new cljs.core.Keyword(null,"bin-width","bin-width",1377922579)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"bin-width","bin-width",1377922579),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ref","ref",1289896967),new cljs.core.Keyword("metabase.lib.schema.binning","bin-width","metabase.lib.schema.binning/bin-width",538632740)], null)], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"num-bins","num-bins",847672055),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"map","map",1371690461),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"strategy","strategy",-1471631918),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"=","=",1152933628),new cljs.core.Keyword(null,"num-bins","num-bins",847672055)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"num-bins","num-bins",847672055),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ref","ref",1289896967),new cljs.core.Keyword("metabase.lib.schema.binning","num-bins","metabase.lib.schema.binning/num-bins",1151926022)], null)], null)], null)], null)], null)], null),"Schema for `:binning` options passed to a `:field` clause."));
+metabase.util.malli.registry.register_BANG_(new cljs.core.Keyword("metabase.lib.schema.binning","binning-option","metabase.lib.schema.binning/binning-option",63252763),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"map","map",1371690461),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("lib","type","lib/type",1175424801),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"=","=",1152933628),new cljs.core.Keyword("option","binning","option/binning",-1447264011)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"display-name","display-name",694513143),new cljs.core.Keyword(null,"string","string",-1989541586)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"mbql","mbql",69346710),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"maybe","maybe",-314397560),new cljs.core.Keyword("metabase.lib.schema.binning","binning","metabase.lib.schema.binning/binning",-806522293)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"default","default",-1987822328),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"optional","optional",2053951509),true], null),new cljs.core.Keyword(null,"boolean","boolean",-1919418404)], null)], null));
+
+//# sourceMappingURL=metabase.lib.schema.binning.js.map

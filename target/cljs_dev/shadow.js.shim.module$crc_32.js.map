@@ -1,0 +1,9 @@
+{
+"version":3,
+"file":"shadow.js.shim.module$crc_32.js",
+"lineCount":5,
+"mappings":"AAAAA,IAAKC,CAAAA,OAAL,CAAa,8BAAb,CAAA;AACAD,IAAKC,CAAAA,OAAL,CAAa,qCAAb,CAAA;AACAC,MAAOC,CAAAA,EAAGC,CAAAA,IAAKC,CAAAA,aAAf,GAA+BH,MAAOC,CAAAA,EAAGG,CAAAA,cAAV,CAAyB,QAAzB,CAA/B,GAAoEC,OAAA,CAAQ,QAAR,CAApE;AACAC,mCAAoCC,CAAAA,OAApC,GAA8CP,MAAOC,CAAAA,EAAGC,CAAAA,IAAKC,CAAAA,aAA7D;;",
+"sources":["shadow.js.shim.module$crc_32.js"],
+"sourcesContent":["goog.provide(\"shadow.js.shim.module$crc_32\");\ngoog.provide(\"module$shadow_js_shim_module$crc_32\");\nshadow.js.shim.module$crc_32 = shadow.js.nativeProvides[\"crc-32\"] = require(\"crc-32\");\nmodule$shadow_js_shim_module$crc_32.default = shadow.js.shim.module$crc_32;\n"],
+"names":["goog","provide","shadow","js","shim","module$crc_32","nativeProvides","require","module$shadow_js_shim_module$crc_32","default"]
+}
